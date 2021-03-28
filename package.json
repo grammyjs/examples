@@ -1,12 +1,12 @@
 {
-    "name": "grammy-examples",
+    "name": "@grammyjs/examples",
     "version": "1.0.0",
-    "description": "",
+    "description": "Example bots to help you get started with grammY",
     "scripts": {
         "bot": "ts-node"
     },
     "keywords": [],
-    "author": "",
+    "author": "KnorpelSenf",
     "license": "MIT",
     "dependencies": {
         "@grammyjs/runner": "^0.9.1",
