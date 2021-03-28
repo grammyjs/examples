@@ -23,6 +23,14 @@ A simple echo bot that echoes all text messages.
 
 Not a real bot, only illustrates how to manually send a single message once. Maybe useful for scripts.
 
+## Sessions ([`./stats.ts`](./stats.ts))
+
+Full-blown example bot that counts messages in a chat and stores the statistics in session objects.
+
+## Runner Example ([`./runner.ts`](./runner.ts))
+
+Illustrates how to use the [`@grammyjs/runner`](https://github.com/grammyjs/runner) package that is useful for large bots.
+
 ## Please Contribute
 
 We could need some more examples here, e.g. about
@@ -33,7 +41,3 @@ We could need some more examples here, e.g. about
 -   file support
 
 and other things.
-
-## Runner Example ([`./runner.ts`](./runner.ts))
-
-Illustrates how to use the [`@grammyjs/runner`](https://github.com/grammyjs/runner) package that is useful for large bots.
