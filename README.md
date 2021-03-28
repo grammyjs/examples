@@ -15,11 +15,11 @@ npm run bot -- <file>
 npm run bot -- echo.ts
 ```
 
-## Hello World ([`echo.ts`](./echo.ts))
+## Hello World ([`./echo.ts`](./echo.ts))
 
 A simple echo bot that echoes all text messages.
 
-## Send a Single Message ([`send-message.ts`](./send-message.ts))
+## Send a Single Message ([`./send-message.ts`](./send-message.ts))
 
 Not a real bot, only illustrates how to manually send a single message once. Maybe useful for scripts.
 
