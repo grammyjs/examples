@@ -6,7 +6,7 @@ import { run } from '@grammyjs/runner'
 // you should switch from `bot.start` to the grammY runner package.
 
 // 1. Create a bot with a token (get it from https://t.me/BotFather)
-const bot = new Bot('123:xyz')
+const bot = new Bot('123:xyz') // <-- place your token inside this string
 
 // 2. Reply to text messages with the received text
 bot.on('message:text', ctx => ctx.reply(ctx.message.text))
