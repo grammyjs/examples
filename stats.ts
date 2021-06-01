@@ -1,32 +1,32 @@
-import { Bot, session, SessionContext } from 'grammy'
+import { Bot, Context, session, SessionFlavor } from 'grammy'
 
 // This bot will collect some basic statistics about each chat. They can be
 // retrieved with the `/stats` command.
 
 // This is the data that will be saved per chat.
-interface Session {
+interface SessionData {
     messages: number
     edits: number
 }
-const baseSession: Session = { messages: 1, edits: 0 }
+
+// flavor the context type to include sessions
+type MyContext = Context & SessionFlavor<SessionData>
 
 // Create a bot
-const bot = new Bot<SessionContext<Session>>('') // <-- place your token inside this string
+const bot = new Bot<MyContext>('') // <-- place your token inside this string
 
 // Note that using `session()` will only save the data in-memory. If the Node
 // process terminates, all data will be lost. A bot running in production will
 // need some sort of database or file storage to persist data between restarts.
 // Confer the grammY documentation to find out how to store data with your bot.
-bot.use(session())
+bot.use(session({ initial: () => ({ messages: 1, edits: 0 }) }))
 
 // Collect statistics
 bot.on('message', async (ctx, next) => {
-    ctx.session ??= baseSession
     ctx.session.messages++
     await next()
 })
 bot.on('edited_message', async (ctx, next) => {
-    ctx.session ??= baseSession
     ctx.session.edits++
     await next()
 })
@@ -45,7 +45,7 @@ bot.on(':new_chat_members:me', ctx =>
 
 // Send statistics upon `/stats`
 bot.command('stats', async ctx => {
-    const stats = ctx.session!
+    const stats = ctx.session
 
     // Format stats to string
     const message = `You sent <b>${
