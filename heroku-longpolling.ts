@@ -1,5 +1,5 @@
 /* 
-1. Create file named app.js
+1. Create file named bot.js
 ---------------------------------------------- */
 import { Bot } from 'grammy';
 
@@ -34,7 +34,7 @@ Then write this single line code.
 
 For example:
 ---------------------------------------------- */
-worker: node app.js
+worker: node bot.js
 /* -------------------------------------------
 
 Our final directory structure should look like this:
@@ -43,7 +43,7 @@ Our final directory structure should look like this:
 - .gitignore            <--- file
 - package.json          <--- file
 - package-lock.json     <--- file
-- app.js                <--- file
+- bot.js                <--- file
 - Procfile              <--- file
 
 3. Deploy to heroku
