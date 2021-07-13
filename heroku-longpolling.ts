@@ -38,13 +38,14 @@ worker: node bot.js
 /* -------------------------------------------
 
 Our final directory structure should look like this:
-- .git                  <--- folder
-- node_modules          <--- folder
-- .gitignore            <--- file
-- package.json          <--- file
-- package-lock.json     <--- file
-- bot.js                <--- file
-- Procfile              <--- file
+.
+├── .git/
+├── node_modules/
+├── .gitignore 
+├── package.json
+├── package-lock.json
+├── bot.js
+└── Procfile
 
 3. Deploy to heroku
 ------------------------------------------- */
