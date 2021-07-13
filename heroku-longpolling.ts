@@ -37,7 +37,7 @@ For example:
 worker: node bot.js
 /* -------------------------------------------
 
-Our final directory structure after compiling .ts files should look like this:
+Our final directory structure should look like this after compiling .ts files :
 .
 ├── .git/
 ├── node_modules/
