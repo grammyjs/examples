@@ -18,7 +18,8 @@ bot.start();
 Heroku have three type of dynos. I will try explain two of them:
   • Web dynos: 
     Web dynos are dynos of the “web” process that receive HTTP traffic from the routers. 
-    This kind of dynos have timeout for 30 seconds for executing code, which is not suitable for long polling method.
+    This kind of dynos have timeout for 30 seconds for executing code, which is not suitable for long polling but useful for Webhook method.
+  
   • Worker dynos: 
     Worker dynos are typically used for background jobs. It does not have timeout. We will use this dynos in our case.
     
@@ -28,7 +29,10 @@ Heroku have three type of dynos. I will try explain two of them:
 
 Create file named Procfile without a file extension in root directory of our project. For example, Procfile.txt or procfile is not valid. 
 Then write this single line code.
-  
+
+<dynos type>: <command for executing our main entry file> 
+
+For example:
 ---------------------------------------------- */
 worker: node app.js
 /* -------------------------------------------
