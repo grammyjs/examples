@@ -32,7 +32,7 @@ Create file named Procfile without a file extension. For example, Procfile.txt o
 worker: node app.js
 /* -------------------------------------------
 
-Our final directory structure should looks like this
+Our final directory structure should look like this
 - node_modules
 - package.json
 - package-lock.json
