@@ -1,5 +1,5 @@
 /* 
-1. Create file named bot.js
+1. Create file named bot.ts
 ---------------------------------------------- */
 import { Bot } from 'grammy';
 
@@ -37,15 +37,17 @@ For example:
 worker: node bot.js
 /* -------------------------------------------
 
-Our final directory structure should look like this:
+Our final directory structure after compiling .ts files should look like this:
 .
 ├── .git/
 ├── node_modules/
 ├── .gitignore 
 ├── package.json
 ├── package-lock.json
+├── bot.ts
 ├── bot.js
+├── tsconfig.json
 └── Procfile
 
-3. Deploy to heroku
+3. Final step: Deploy to heroku
 ------------------------------------------- */
