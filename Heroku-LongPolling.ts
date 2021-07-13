@@ -26,13 +26,14 @@ Heroku have three type of dynos. I will try explain two of them:
     This worker dynos will run your script forever and will not sleep like Web dynos. 
     Make sure you have enough dynos hours if you want run your bot for a whole month.
 
-Create file named Procfile without a file extension. For example, Procfile.txt or procfile is not valid. Then write this single line code
+Create file named Procfile without a file extension in root directory of our project. For example, Procfile.txt or procfile is not valid. 
+Then write this single line code.
   
 ---------------------------------------------- */
 worker: node app.js
 /* -------------------------------------------
 
-Our final directory structure should look like this
+Our final directory structure should look like this:
 - .git              
 - .gitignore
 - node_modules
