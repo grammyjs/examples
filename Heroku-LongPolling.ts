@@ -33,11 +33,13 @@ worker: node app.js
 /* -------------------------------------------
 
 Our final directory structure should look like this
+- .git              
+- .gitignore
 - node_modules
 - package.json
 - package-lock.json
 - app.js
-- Procfile 
+- Procfile
 
 3. Deploy to heroku
 ------------------------------------------- */
