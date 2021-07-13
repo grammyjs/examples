@@ -1,23 +1,15 @@
 /* 
-Our directory structure should looks like this
-----------------------------------------------
-- node_modules
-- package.json
-- package-lock.json
-- app.js
-- procfile 
-
 1. Create file named app.js
 ---------------------------------------------- */
-import { Bot } from 'grammy'
+import { Bot } from 'grammy';
 
-const bot = new Bot('') // <-- put your bot token between the ''
+const bot = new Bot(''); // <-- put your bot token between the ''
 
 // React to /start command
-bot.command('start', (ctx) => ctx.reply("I'm running on Heroku using long polling!"))
+bot.command('start', (ctx) => ctx.reply("I'm running on Heroku using long polling!"));
 
 // Start your bot
-bot.start()
+bot.start();
   
 /* -------------------------------------------
 
@@ -30,13 +22,22 @@ Heroku have three type of dynos. I will try explain two of them:
   • Worker dynos: 
     Worker dynos are typically used for background jobs. It does not have timeout. We will use this dynos in our case.
     
-    REMINDER! 
+    ⚠ REMINDER! 
     This worker dynos will run your script forever and will not sleep like Web dynos. 
     Make sure you have enough dynos hours if you want run your bot for a whole month.
 
 Create file named Procfile without a file extension. For example, Procfile.txt or procfile is not valid. Then write this single line code
   
 ---------------------------------------------- */
-worker: node prod/app.js
+worker: node app.js
 /* -------------------------------------------
 
+Our final directory structure should looks like this
+- node_modules
+- package.json
+- package-lock.json
+- app.js
+- Procfile 
+
+3. Deploy to heroku
+------------------------------------------- */
