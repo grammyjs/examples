@@ -42,6 +42,10 @@ Our final directory structure should look like this after compiling .ts files :
 .
 ├── .git/
 ├── node_modules/
+├── src/
+    └── bot.ts
+├── lib/
+    └── bot.js
 ├── .gitignore 
 ├── package.json
 ├── package-lock.json
