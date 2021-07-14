@@ -3,7 +3,8 @@
 ---------------------------------------------- */
 import { Bot } from 'grammy';
 
-const bot = new Bot(''); // <-- put your bot token between the ''
+if (process.env.BOT_TOKEN == null) throw new TypeError('BOT_TOKEN is missing.');
+const bot = new Bot(process.env.BOT_TOKEN);
 
 // React to /start command
 bot.command('start', (ctx) => ctx.reply("I'm running on Heroku using long polling!"));
