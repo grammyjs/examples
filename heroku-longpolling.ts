@@ -44,8 +44,8 @@ Our final directory structure should look like this after compiling .ts files :
 ├── .gitignore 
 ├── package.json
 ├── package-lock.json
-├── bot.ts
-├── bot.js
+├── src/bot.ts
+├── lib/bot.js
 ├── tsconfig.json
 └── Procfile
 
