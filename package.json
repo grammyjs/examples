@@ -9,7 +9,9 @@
     "author": "KnorpelSenf",
     "license": "MIT",
     "dependencies": {
+        "@grammyjs/router": "^1.0.6",
         "@grammyjs/runner": "^1.0.2",
+        "@grammyjs/transformer-throttler": "^1.0.0",
         "grammy": "^1.1.7"
     },
     "devDependencies": {
