@@ -1,4 +1,4 @@
-## Local Bot API Example ([`./polling`](./polling.ts), [`./webhook`](./webhook.ts))
+## Local Bot API Example ([`./polling.ts`](./polling.ts), [`./webhook.ts`](./webhook.ts))
 
 This example illustrates how to run a bot using [Local Bot API](https://core.telegram.org/bots/api#using-a-local-bot-api-server) in the docker.
 
