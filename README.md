@@ -40,7 +40,7 @@ This bot uses them anyway in order to illustrate how to use them.)
 
 Illustrates how to use the [`@grammyjs/runner`](https://github.com/grammyjs/runner) package that is useful for large bots.
 
-## Scaling Example ([`scaling/index`](./scaling/index.ts))
+## Scaling Example ([`scaling`](./scaling/index.ts))
 
 An advanced but minimal example bot that demonstrates a viable directory structure, for the collective orchestration of [`custom context flavors`](https://grammy.dev/guide/context.html#context-flavours), [`transformers`](https://grammy.dev/advanced/transformers.html#bot-api-transformers), [`sessions with initial data`](https://grammy.dev/plugins/session.html#how-to-use-sessions), [`composers`](https://grammy.dev/advanced/middleware.html#middleware-in-grammy), and [`routers`](https://grammy.dev/plugins/router.html#combining-routers-with-sessions).
 
