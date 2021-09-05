@@ -46,7 +46,7 @@ An advanced but minimal example bot that demonstrates a viable directory structu
 
 ##  [Local Bot API Example »](./local-bot-api)
 
-Illustrates how to run a bot using [Local Bot API](https://core.telegram.org/bots/api#using-a-local-bot-api-server) in the docker.
+Illustrates how to run a bot using a [local Bot API server](https://core.telegram.org/bots/api#using-a-local-bot-api-server) via Docker.
 
 ## Please Contribute
 
