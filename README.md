@@ -9,7 +9,7 @@ This repository provides a number of example bots to help you get started.
 5. Run a bot with:
 
 ```bash
-npm run bot <file>
+npm run bot <name>
 
 # Example:
 npm run bot echo
