@@ -15,23 +15,32 @@ npm run bot <file>
 npm run bot echo.ts
 ```
 
-## Hello World ([`./echo.ts`](./echo.ts))
+## Hello World ([`./echo`](./echo.ts))
 
 A simple echo bot that echoes all text messages.
 
-## Send a Single Message ([`./send-message.ts`](./send-message.ts))
+## Send a Single Message ([`./send-message`](./send-message.ts))
 
 Not a real bot, only illustrates how to manually send a single message once. Maybe useful for scripts.
 
-## Sessions ([`./stats.ts`](./stats.ts))
+## Sessions ([`./stats`](./stats.ts))
 
-Full-blown example bot that counts messages in a chat and stores the statistics in session objects.
+Full-blown example bot that counts photos in a chat and stores the statistics in session objects.
 
-## Runner Example ([`./runner.ts`](./runner.ts))
+## Lazy Sessions ([`./stats-lazy`](./stats-lazy.ts))
+
+Full-blown example bot that counts messages in a chat and stores the statistics using _[lazy sessions](https://grammy.dev/plugins/session.html#lazy-sessions)_.
+The advantage of lazy sessions is that the storage is only queried whenever data is actually needed.
+
+(Note that this bot stores data in-memory, it does not connect to a real database.
+Therefore, using lazy sessions does not make much sense.
+This bot uses them anyway in order to illustrate how to use them.)
+
+## Runner Example ([`./runner`](./runner.ts))
 
 Illustrates how to use the [`@grammyjs/runner`](https://github.com/grammyjs/runner) package that is useful for large bots.
 
-## Scaling Example ([`./scaling/index.ts`](./scaling/index.ts))
+## Scaling Example ([`./scaling/index`](./scaling/index.ts))
 
 An advanced but minimal example bot that demonstrates a viable directory structure, for the collective orchestration of [`custom context flavors`](https://grammy.dev/guide/context.html#context-flavours), [`transformers`](https://grammy.dev/advanced/transformers.html#bot-api-transformers), [`sessions with initial data`](https://grammy.dev/plugins/session.html#how-to-use-sessions), [`composers`](https://grammy.dev/advanced/middleware.html#middleware-in-grammy), and [`routers`](https://grammy.dev/plugins/router.html#combining-routers-with-sessions).
 

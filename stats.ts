@@ -57,9 +57,7 @@ bot.command('stats', async ctx => {
     } edits</b> per message on average!`
 
     // Send message in same chat using `reply` shortcut. Don't forget to `await`!
-    await ctx.reply(message, {
-        parse_mode: 'HTML',
-    })
+    await ctx.reply(message, { parse_mode: 'HTML' })
 })
 
 // Catch errors and log them
