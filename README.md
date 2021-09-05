@@ -25,11 +25,11 @@ Not a real bot, only illustrates how to manually send a single message once. May
 
 ## Sessions ([`stats`](./stats.ts))
 
-Full-blown example bot that counts photos in a chat and stores the statistics in session objects.
+Full-blown example bot that counts messages in a chat and stores the statistics in session objects.
 
 ## Lazy Sessions ([`stats-lazy`](./stats-lazy.ts))
 
-Full-blown example bot that counts messages in a chat and stores the statistics using _[lazy sessions](https://grammy.dev/plugins/session.html#lazy-sessions)_.
+Full-blown example bot that counts photos in a chat and stores the statistics using _[lazy sessions](https://grammy.dev/plugins/session.html#lazy-sessions)_.
 The advantage of lazy sessions is that the storage is only queried whenever data is actually needed.
 
 (Note that this bot stores data in-memory, it does not connect to a real database.
