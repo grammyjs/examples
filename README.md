@@ -3,8 +3,8 @@
 This repository provides a number of example bots to help you get started.
 
 1. Create a bot with [@BotFather](https://t.me/BotFather), and get the **bot token**
-2. Clone this example repo
-3. Run `npm install`
+2. Clone this example repository
+3. Run `npm install` in the root directory of this repo
 4. Paste your token into the bot source file that you want to run (e.g. `./echo.ts`)
 5. Run a bot with:
 
