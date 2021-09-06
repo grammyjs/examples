@@ -48,6 +48,10 @@ An advanced but minimal example bot that demonstrates a viable directory structu
 
 Illustrates how to run a bot using a [local Bot API server](https://core.telegram.org/bots/api#using-a-local-bot-api-server) via Docker.
 
+##  [Local Bot API with HTTPS Example »](./local-bot-api-https)
+
+Illustrates how to run a bot using a [local Bot API server](https://core.telegram.org/bots/api#using-a-local-bot-api-server) with a reverse proxy and self-signed certificate via Docker.
+
 ## Please Contribute
 
 We could need some more examples here, e.g. about

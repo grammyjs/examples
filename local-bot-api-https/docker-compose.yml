@@ -1,0 +1,22 @@
+version: '3'
+services:
+    bot-api:
+        build:
+            context: .
+            dockerfile: Dockerfile.bot-api
+        environment:
+            - TELEGRAM_LOCAL=1
+            # 1. Create an application with api id and api hash (get them from https://my.telegram.org/apps)
+            - TELEGRAM_API_ID= # <-- place your api id here
+            - TELEGRAM_API_HASH= # <-- place your api hash here
+
+    bot:
+        build:
+            context: .
+            dockerfile: Dockerfile.bot
+        environment:
+            # 2. Create a bot with a token (get it from https://t.me/BotFather)
+            - BOT_TOKEN= # <-- place your token here
+        command: npm run bot polling
+        # OR
+        # command: npm run bot webhook
