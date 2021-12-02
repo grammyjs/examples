@@ -63,10 +63,7 @@ dishMenu.dynamic((ctx) => {
 function createDishMenu(dish: string) {
   return new MenuRange<MyContext>()
     .text({
-      text: (ctx) =>
-        typeof dish === "string" && ctx.session.favoriteIds.includes(dish)
-          ? "Yummy!"
-          : "Meh.",
+      text: (ctx) => ctx.session.favoriteIds.includes(dish) ? "Yummy!" : "Meh.",
       payload: dish,
     }, (ctx) => {
       const set = new Set(ctx.session.favoriteIds);
