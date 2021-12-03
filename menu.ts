@@ -35,32 +35,31 @@ const dishDatabase: Dish[] = [
 const pizzaDatabase: Pizza[] = [
     { id: "pepperoni", name: "Pepperoni", source: "https://riotfest.org/wp-content/uploads/2016/10/p-evid1.jpg" },
     { id: "hawaiana", name: "Hawaina", source: "https://www.tantefanny.nl/wp-content/uploads/sites/2/2018/02/Pizza_Hawaii.jpg" }
-]
-
-/** Define initial session data */
-function initial(): SessionData {
-  return { favoriteIds: [] };
-}
 
 const bot = new Bot<MyContext>("");
-bot.use(session({ initial }));
+
+bot.use(session({
+  initial(): SessionData {
+    return { favoriteIds: [] };
+  },
+}));
 
 // Create a dynamic menu that lists all dishes in the dishDatabase,
 // one button each
 const mainText = "Pick a dish to rate it!";
 const mainMenu = new Menu<MyContext>("food");
-mainMenu.dynamic(() =>
-  dishDatabase.reduce(addDishToDynamicRange, new MenuRange<MyContext>())
-);
-function addDishToDynamicRange(range: MenuRange<MyContext>, dish: Dish) {
-  return range
-    .submenu(
+mainMenu.dynamic(() => {
+  const range = new MenuRange<MyContext>();
+  for (const dish of dishDatabase) {
+    range.submenu(
       { text: dish.name, payload: dish.id }, // label and payload
       "dish", // navigation target menu
       (ctx) => ctx.editMessageText(dishText(dish.name), { parse_mode: "HTML" }), // handler
     )
-    .row();
-}
+      .row();
+  }
+  return range;
+});
 
 // Create the sub-menu that is used for rendering dishes
 const dishText = (dish: string) => `<b>${dish}</b>\n\nYour rating:`;
