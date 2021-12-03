@@ -35,6 +35,7 @@ const dishDatabase: Dish[] = [
 const pizzaDatabase: Pizza[] = [
     { id: "pepperoni", name: "Pepperoni", source: "https://riotfest.org/wp-content/uploads/2016/10/p-evid1.jpg" },
     { id: "hawaiana", name: "Hawaina", source: "https://www.tantefanny.nl/wp-content/uploads/sites/2/2018/02/Pizza_Hawaii.jpg" }
+];
 
 const bot = new Bot<MyContext>("");
 
