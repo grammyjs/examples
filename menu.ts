@@ -2,10 +2,10 @@ import { Bot, Context, InputFile, session, SessionFlavor } from "grammy";
 import { Menu, MenuRange } from "@grammyjs/menu";
 
 /** This is how the dishes look that this bot is managing */
-interface Dish {
-  id: string;
-  name: string;
-}
+// interface Dish {
+//   id: string;
+//   name: string;
+// }
 
 interface Pizza {
   id: string;
@@ -25,12 +25,12 @@ type MyContext = Context & SessionFlavor<SessionData>;
  * They can also decide to delete them. If a user decides to delete a dish, it
  * will be gone for everyone.
  */
-const dishDatabase: Dish[] = [
-  { id: "pasta", name: "Pasta" },
-  { id: "pizza", name: "Pizza" },
-  { id: "sushi", name: "Sushi" },
-  { id: "entrct", name: "Entrecôte" },
-];
+// const dishDatabase: Dish[] = [
+//   { id: "pasta", name: "Pasta" },
+//   { id: "pizza", name: "Pizza" },
+//   { id: "sushi", name: "Sushi" },
+//   { id: "entrct", name: "Entrecôte" },
+// ];
 
 const pizzaDatabase: Pizza[] = [
   {
@@ -60,11 +60,21 @@ const mainText = "Pick a dish to rate it!";
 const mainMenu = new Menu<MyContext>("food");
 mainMenu.dynamic(() => {
   const range = new MenuRange<MyContext>();
-  for (const dish of dishDatabase) {
-    range.submenu(
+  for (const dish of pizzaDatabase) {
+    range.text(
       { text: dish.name, payload: dish.id }, // label and payload
-      "dish", // navigation target menu
-      (ctx) => ctx.editMessageText(dishText(dish.name), { parse_mode: "HTML" }), // handler
+      async (ctx) => {
+        const pizzaId = ctx.match;
+        const pizza = pizzaDatabase.find((p) => p.id === pizzaId);
+        if (pizza === undefined) throw new Error("Pizza not found!");
+        // We cannot edit a text message to become a photo message,
+        // so we need to send a new message with the target menu
+        await ctx.replyWithPhoto(new InputFile({ url: pizza.source }), {
+          caption: pizza.name,
+          reply_markup: dishMenu,
+        });
+        await ctx.deleteMessage();
+      }, // handler
     )
       .row();
   }
@@ -77,7 +87,6 @@ const dishMenu = new Menu<MyContext>("dish");
 dishMenu.dynamic((ctx) => {
   const dish = ctx.match;
   if (typeof dish !== "string") throw new Error("No dish chosen!");
-  createMessageMedia(ctx, pizzaDatabase[0], createDishMenu(ctx.match));
   return createDishMenu(dish);
 });
 /** Creates a menu that can render any given dish */
@@ -93,22 +102,18 @@ function createDishMenu(dish: string) {
       ctx.menu.update();
     })
     .row()
-    .back({ text: "X Delete", payload: dish }, async (ctx) => {
-      const index = dishDatabase.findIndex((d) => d.id === dish);
-      dishDatabase.splice(index, 1);
-      await ctx.editMessageText("Pick a dish to rate it!");
+    .text({ text: "X Delete", payload: dish }, async (ctx) => {
+      const index = pizzaDatabase.findIndex((p) => p.id === dish);
+      pizzaDatabase.splice(index, 1);
+      await backToMain(ctx);
     })
     .row()
-    .back({ text: "Back", payload: dish });
+    .text({ text: "Back", payload: dish }, backToMain);
 }
-function createMessageMedia(ctx, product: Pizza | undefined, keyboard) {
-  const message = ctx.replyWithPhoto(
-    new InputFile(product.source),
-    {
-      caption: product.name,
-      reply_markup: keyboard,
-    },
-  );
+async function backToMain(ctx: MyContext) {
+  // Changing message type back from photo to text, have to re-send message
+  await ctx.reply(mainText, { reply_markup: mainMenu });
+  await ctx.deleteMessage();
 }
 
 mainMenu.register(dishMenu);
@@ -134,9 +139,9 @@ bot.command("fav", async (ctx) => {
     return;
   }
   const names = favs
-    .map((id) => dishDatabase.find((dish) => dish.id === id))
-    .filter((dish): dish is Dish => dish !== undefined)
-    .map((dish) => dish.name)
+    .map((id) => pizzaDatabase.find((pizza) => pizza.id === id))
+    .filter((pizza): pizza is Pizza => pizza !== undefined)
+    .map((pizza) => pizza.name)
     .join("\n");
   await ctx.reply(`Those are your favorite dishes:\n\n${names}`);
 });
