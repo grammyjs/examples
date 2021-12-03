@@ -1,10 +1,16 @@
-import { Bot, Context, session, SessionFlavor } from "grammy";
+import { Bot, Context, session, SessionFlavor, InputFile } from "grammy";
 import { Menu, MenuRange } from "@grammyjs/menu";
 
 /** This is how the dishes look that this bot is managing */
 interface Dish {
   id: string;
   name: string;
+}
+
+interface Pizza {
+    id: string;
+    name: string;
+    source: string;
 }
 
 interface SessionData {
@@ -25,6 +31,11 @@ const dishDatabase: Dish[] = [
   { id: "sushi", name: "Sushi" },
   { id: "entrct", name: "Entrecôte" },
 ];
+
+const pizzaDatabase: Pizza[] = [
+    { id: "pepperoni", name: "Pepperoni", source: "https://riotfest.org/wp-content/uploads/2016/10/p-evid1.jpg" },
+    { id: "hawaiana", name: "Hawaina", source: "https://www.tantefanny.nl/wp-content/uploads/sites/2/2018/02/Pizza_Hawaii.jpg" }
+]
 
 /** Define initial session data */
 function initial(): SessionData {
@@ -57,6 +68,7 @@ const dishMenu = new Menu<MyContext>("dish");
 dishMenu.dynamic((ctx) => {
   const dish = ctx.match;
   if (typeof dish !== "string") throw new Error("No dish chosen!");
+  createMessageMedia(ctx, pizzaDatabase[0], createDishMenu(ctx.match))
   return createDishMenu(dish);
 });
 /** Creates a menu that can render any given dish */
@@ -79,6 +91,15 @@ function createDishMenu(dish: string) {
     })
     .row()
     .back({ text: "Back", payload: dish });
+}
+function createMessageMedia (ctx, product: Pizza | undefined, keyboard) {
+    const message = ctx.replyWithPhoto(
+        new InputFile(product.source),
+        {
+            caption: product.name,
+            reply_markup: keyboard
+        }
+    )
 }
 
 mainMenu.register(dishMenu);
