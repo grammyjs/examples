@@ -42,7 +42,7 @@ mainMenu.dynamic(() =>
   dishDatabase.reduce(addDishToDynamicRange, new MenuRange<MyContext>())
 );
 function addDishToDynamicRange(range: MenuRange<MyContext>, dish: Dish) {
-  return range
+  return MenuRange
     .submenu(
       { text: dish.name, payload: dish.id }, // label and payload
       "dish", // navigation target menu
