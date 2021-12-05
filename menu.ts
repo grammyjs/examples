@@ -34,7 +34,7 @@ function initial(): SessionData {
 const bot = new Bot<MyContext>("");
 bot.use(session({ initial }));
 
-// Create a dynamic menu that lists all dishes in the dishDatabase,
+// Create a dynamic menu that lists all pizzas in the pizzaDatabase,
 // one button each
 const mainText = "Pick a dish to rate it!";
 const mainMenu = new Menu<MyContext>("food");
@@ -81,7 +81,7 @@ function createDishMenu(dish: string) {
         .back({ text: "Back", payload: dish });
 }
 
-mainMenu.register(dishMenu);
+mainMenu.register(pizzaMenu);
 
 bot.use(mainMenu);
 
