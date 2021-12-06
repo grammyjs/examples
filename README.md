@@ -23,10 +23,14 @@ A simple echo bot that echoes all text messages.
 
 Not a real bot, only illustrates how to manually send a single message once. Maybe useful for scripts.
 
-## Nested menus ([`menu`](./menu.ts))
+## Nested Menus ([`menu`](./menu.ts))
 
 Advanced menu example bot that lets you manage different dishes (Pasta, Pizza, Sushi, Entrecôte) via a nested menu structure.
 It shows how to build more complex menus where all data is generated at runtime.
+
+## Media Menus ([`menu-with-photo`](./menu-with-photo.ts))
+
+Similar to the nested menu example, but with menu messages that include photos.
 
 ## Sessions ([`stats`](./stats.ts))
 
