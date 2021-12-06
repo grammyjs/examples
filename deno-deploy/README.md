@@ -9,3 +9,5 @@
 ```text
 https://raw.githubusercontent.com/grammyjs/examples/main/deno-deploy/mod.ts
 ```
+
+5. Set the webhook of your bot to your app's URL.
