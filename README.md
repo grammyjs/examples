@@ -53,6 +53,10 @@ Illustrates how to use the [`@grammyjs/runner`](https://github.com/grammyjs/runn
 
 An advanced but minimal example bot that demonstrates a viable directory structure, for the collective orchestration of [`custom context flavors`](https://grammy.dev/guide/context.html#context-flavours), [`transformers`](https://grammy.dev/advanced/transformers.html#bot-api-transformers), [`sessions with initial data`](https://grammy.dev/plugins/session.html#how-to-use-sessions), [`composers`](https://grammy.dev/advanced/middleware.html#middleware-in-grammy), and [`routers`](https://grammy.dev/plugins/router.html#combining-routers-with-sessions).
 
+## [Vercel Example »](./vercel-bot)
+
+Example bot that can run on [Vercel](https://vercel.com/).
+
 ## [Local Bot API Example »](./local-bot-api)
 
 Illustrates how to run a bot using a [local Bot API server](https://core.telegram.org/bots/api#using-a-local-bot-api-server) via Docker.
