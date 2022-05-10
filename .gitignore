@@ -19,3 +19,5 @@ package-lock.json
 
 # Output of 'npm pack'
 *.tgz
+
+.DS_Store
