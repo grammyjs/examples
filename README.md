@@ -56,6 +56,7 @@ An advanced but minimal example bot that demonstrates a viable directory structu
 ## [Vercel Example »](./vercel-bot)
 
 Example bot that can run on [Vercel](https://vercel.com/).
+
 ## [Deno Deploy Example »](./deno-deploy)
 
 Example bot that can run on [Deno Deploy](https://deno.com/deploy/).
