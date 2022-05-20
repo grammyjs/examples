@@ -61,6 +61,10 @@ Example bot that can run on [Vercel](https://vercel.com/).
 
 Example bot that can run on [Deno Deploy](https://deno.com/deploy/).
 
+## [Supabase Edge Functions Example »](./supabase-edge-functions)
+
+Example bot that runs on [Supabase Edge Functions](https://supabase.com/edge-functions).
+
 ## [Local Bot API Example »](./local-bot-api)
 
 Illustrates how to run a bot using a [local Bot API server](https://core.telegram.org/bots/api#using-a-local-bot-api-server) via Docker.
@@ -73,9 +77,9 @@ Illustrates how to run a bot using a [local Bot API server](https://core.telegra
 
 We could need some more examples here, e.g. about
 
-- command handling
-- filter queries
-- inline keyboards
-- file support
+-   command handling
+-   filter queries
+-   inline keyboards
+-   file support
 
 and other things.
