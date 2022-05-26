@@ -20,4 +20,4 @@
 
 ## Running the bot locally
 
-Use `index.ts` to run the bot locally for development. Note that it will delete webhook url and you'll need to repeat the 3rd step to be able to run the bot on Deno Deploy.
+Use `poll.ts` to run the bot locally for development. Note that it will delete webhook url and you'll need to repeat the 3rd step to be able to run the bot on Deno Deploy.
