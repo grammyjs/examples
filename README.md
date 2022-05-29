@@ -61,6 +61,10 @@ Example bot that can run on [Vercel](https://vercel.com/).
 
 Example bot that can run on [Deno Deploy](https://deno.com/deploy/).
 
+## [Deta Example »](./deta)
+
+Example bot that can run on [Deta](https://deta.sh/).
+
 ## [Supabase Edge Functions Example »](./supabase-edge-functions)
 
 Example bot that runs on [Supabase Edge Functions](https://supabase.com/edge-functions).
