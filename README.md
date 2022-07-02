@@ -51,7 +51,8 @@ Illustrates how to use the [`@grammyjs/runner`](https://github.com/grammyjs/runn
 
 ## Scaling Example ([`scaling`](./scaling/index.ts))
 
-NOTE: This example is not endorsement of any directory structure. See [`Awesome grammY`](https://github.com/grammyjs/awesome-grammY) for live examples instead.
+NOTE: This example is not endorsement of any directory structure.
+See [`Awesome grammY`](https://github.com/grammyjs/awesome-grammY) for live examples instead.
 
 A minimal example bot that demonstrates how various grammyjs objects can be orchestrated together, including [`custom context flavors`](https://grammy.dev/guide/context.html#context-flavours), [`transformers`](https://grammy.dev/advanced/transformers.html#bot-api-transformers), [`sessions with initial data`](https://grammy.dev/plugins/session.html#how-to-use-sessions), [`composers`](https://grammy.dev/advanced/middleware.html#middleware-in-grammy), and [`routers`](https://grammy.dev/plugins/router.html#combining-routers-with-sessions).
 
