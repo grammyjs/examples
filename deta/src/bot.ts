@@ -6,7 +6,7 @@ interface SessionData {
 }
 type MyContext = Context & SessionFlavor<SessionData>
 
-export const bot = new Bot<MyContext>(process.env.TOKEN || '')
+export const bot = new Bot<MyContext>(process.env.BOT_TOKEN || '')
 
 bot.use(
   session({

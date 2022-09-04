@@ -5,6 +5,6 @@ import { bot } from './bot'
 const app = express()
 app.use(express.json())
 
-app.post('/' + process.env.TOKEN, webhookCallback(bot, 'express'))
+app.post('/' + process.env.BOT_TOKEN, webhookCallback(bot, 'express'))
 
 export = app
