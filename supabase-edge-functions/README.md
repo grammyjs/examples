@@ -20,7 +20,11 @@ supabase secrets set BOT_TOKEN=your_token FUNCTION_SECRET=random_secret
 ```
 
 4. Set your bot’s webhook URL to `https://<PROJECT_NAME>.functions.supabase.co/telegram-bot` (replacing `<...>` with respective values).
-   In order to do that, open the request URL in your browser, for example: `https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=https://<PROJECT_NAME>.functions.supabase.co/telegram-bot?secret=<FUNCTION_SECRET>`
+   To do that, you open the request URL in your browser:
+
+```text
+https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=https://<PROJECT_NAME>.functions.supabase.co/telegram-bot?secret=<FUNCTION_SECRET>
+```
 
 ## More Supabase Edge Function Examples
 
