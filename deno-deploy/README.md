@@ -3,8 +3,8 @@
 ## Preparation
 
 1. Create a project on [Deno Deploy](https://deno.com/deploy)
-2. Add `TOKEN` to environment variables (it can be found on project's settings page)
-3. Set your bot's webhook url to `https://<PROJECT_NAME>.deno.dev/<TOKEN>` (Replacing `<...>` with respective values). In order to do that, run this url (in your browser, for example): `https://api.telegram.org/bot<TOKEN>/setWebhook?url=https://<PROJECT_NAME>.deno.dev/<TOKEN>`
+2. Add `BOT_TOKEN` to environment variables (it can be found on project's settings page)
+3. Set your bot's webhook url to `https://<PROJECT_NAME>.deno.dev/<BOT_TOKEN>` (Replacing `<...>` with respective values). In order to do that, run this url (in your browser, for example): `https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=https://<PROJECT_NAME>.deno.dev/<BOT_TOKEN>`
 
 ### Deploying with GitHub (easy)
 
