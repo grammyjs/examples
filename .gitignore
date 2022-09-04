@@ -17,7 +17,7 @@ node_modules/
 # package-lock.json will not be published, so no need to store it
 package-lock.json
 
-# Output of 'npm pack'
+# Output of npm pack
 *.tgz
 
 .DS_Store

@@ -1,17 +1,35 @@
 # [grammY](https://grammy.dev) on [Supabase Edge Functions](https://supabase.com/edge-functions)
 
-Try it out: https://t.me/supabase_example_bot
-
 ![demo](./demo.gif)
 
-## Deploy
+> Try it out: [@supabase_example_bot](https://t.me/supabase_example_bot)
 
-1. Run `supabase functions deploy --no-verify-jwt telegram-bot`
-2. Get your Telegram token from https://t.me/BotFather
-3. Run `supabase secrets set BOT_TOKEN=your_token FUNCTION_SECRET=random_secret`
-4. Set your bot's webhook url to `https://<PROJECT_NAME>.functions.supabase.co/telegram-bot` (Replacing `<...>` with respective values). In order to do that, run this url (in your browser, for example): `https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=https://<PROJECT_NAME>.functions.supabase.co/telegram-bot?secret=<FUNCTION_SECRET>`
-5. That's it, go ahead and chat with your bot 🤖💬
+## Deploying
+
+1. Create the function:
+
+```shell
+supabase functions deploy --no-verify-jwt telegram-bot
+```
+
+2. Contact [@BotFather](https://t.me/BotFather) to create a bot and get its
+   token.
+3. Set the secrets:
+
+```shell
+supabase secrets set BOT_TOKEN=your_token FUNCTION_SECRET=random_secret
+```
+
+4. Set your bot’s webhook URL to
+   `https://<PROJECT_NAME>.functions.supabase.co/telegram-bot` (replacing
+   `<...>` with respective values). To do that, you open the request URL in your
+   browser:
+
+```text
+https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=https://<PROJECT_NAME>.functions.supabase.co/telegram-bot?secret=<FUNCTION_SECRET>
+```
 
 ## More Supabase Edge Function Examples
 
-Supabase Edge Functions can be used for a bunch of things, have a look at [some other examples](https://github.com/supabase/supabase/tree/master/examples/edge-functions).
+Supabase Edge Functions can be used for a bunch of other things, have a look at
+[some other examples](https://github.com/supabase/supabase/tree/master/examples/edge-functions).
