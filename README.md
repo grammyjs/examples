@@ -104,7 +104,7 @@ with a self-signed TLS certificate, and run your bot on it.
 
 ## Please Contribute
 
-We could need some more examples here, for example:
+We could have some more examples here, for example:
 
 - command handling
 - filter queries
