@@ -1,21 +1,19 @@
-import { serve } from "https://deno.land/x/sift@0.5.0/mod.ts";
+import { serve } from "https://deno.land/std@0.154.0/http/server.ts";
 import { bot } from "./bot.ts";
 import { webhookCallback } from "./deps.deno.ts";
 
 const handleUpdate = webhookCallback(bot, "std/http");
 
-serve({
-  ["/" + Deno.env.get("TOKEN")]: async (req) => {
-    if (req.method == "POST") {
+serve(async (req) => {
+  if (req.method == "POST") {
+    const url = new URL(req.url);
+    if (url.pathname.slice(1) == bot.token) {
       try {
         return await handleUpdate(req);
       } catch (err) {
         console.error(err);
       }
     }
-    return new Response();
-  },
-  "/": () => {
-    return new Response("Hello world!");
-  },
+  }
+  return new Response();
 });
