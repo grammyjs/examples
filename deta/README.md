@@ -9,7 +9,7 @@
 5. Run `deta update -e .env` to sync the token
 6. Run `yarn install` to install dependencies
 7. Run `yarn deploy` to deploy the project
-8. Set your bot's webhook url to `<ENDPOINT>/<TOKEN>` (replacing `<...>` with respective values). Endpoint can be seen by running `deta details` (`"endpoint"` property). In order to do that, run this url (in your browser, for example): `https://api.telegram.org/bot<TOKEN>/setWebhook?url=<ENDPOINT>/<TOKEN>`
+8. Set your bot's webhook url to `<ENDPOINT>/<BOT_TOKEN>` (replacing `<...>` with respective values). Endpoint can be seen by running `deta details` (`"endpoint"` property). In order to do that, run this url (in your browser, for example): `https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=<ENDPOINT>/<BOT_TOKEN>`
 
 ## Running the bot locally
 
