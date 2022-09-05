@@ -1,23 +1,23 @@
-import { Bot, webhookCallback } from "grammy";
-import express from "express";
+import { Bot, webhookCallback } from 'grammy'
+import express from 'express'
 
 // 1. Create a bot
 export const bot = new Bot(process.env.BOT_TOKEN as string, {
-  client: {
-    // 2. Set the local Bot API URL
-    apiRoot: "http://bot-api:8081",
-  },
-});
+    client: {
+        // 2. Set the local Bot API URL
+        apiRoot: 'http://bot-api:8081',
+    },
+})
 
-bot.on("message:text", (ctx) => ctx.reply(ctx.message.text));
+bot.on('message:text', ctx => ctx.reply(ctx.message.text))
 
-const server = express();
-server.use(express.json());
+const server = express()
+server.use(express.json())
 
 // 3. Register a handler for the bot
-server.post("/webhook", webhookCallback(bot, "express"));
+server.post('/webhook', webhookCallback(bot, 'express'))
 
-server.listen(80);
+server.listen(80)
 
 // 4. Set webhook for handler in Bot API
-bot.api.setWebhook("http://bot/webhook");
+bot.api.setWebhook('http://bot/webhook')

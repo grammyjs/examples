@@ -1,6 +1,6 @@
-import { SessionData } from "./SessionData";
-import type { Context, SessionFlavor } from "grammy";
+import { SessionData } from './SessionData'
+import type { Context, SessionFlavor } from 'grammy'
 
-type CustomContext = Context & SessionFlavor<SessionData>;
+type CustomContext = Context & SessionFlavor<SessionData>
 
-export type { CustomContext };
+export type { CustomContext }

@@ -1,8 +1,8 @@
 interface SessionData {
-  route: string;
+    route: string
 
-  leftOperand: number;
-  rightOperand: number;
+    leftOperand: number
+    rightOperand: number
 }
 
-export { SessionData };
+export { SessionData }

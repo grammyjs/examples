@@ -1,14 +1,14 @@
 {
-  "compilerOptions": {
-    "charset": "utf8",
-    "forceConsistentCasingInFileNames": true,
-    "newLine": "lf",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedParameters": true,
-    "strict": true,
-    "target": "ES2019",
-    "moduleResolution": "node"
-  }
+    "compilerOptions": {
+        "charset": "utf8",
+        "forceConsistentCasingInFileNames": true,
+        "newLine": "lf",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUncheckedIndexedAccess": true,
+        "noUnusedParameters": true,
+        "strict": true,
+        "target": "ES2019",
+        "moduleResolution": "node"
+    }
 }

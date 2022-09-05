@@ -1,4 +1,4 @@
-require("dotenv/config");
-import { bot } from "./bot";
+require('dotenv/config')
+import { bot } from './bot'
 
-bot.start();
+bot.start()

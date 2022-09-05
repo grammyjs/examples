@@ -106,9 +106,9 @@ with a self-signed TLS certificate, and run your bot on it.
 
 We could have some more examples here, for example:
 
-- command handling
-- filter queries
-- inline keyboards
-- file support
+-   command handling
+-   filter queries
+-   inline keyboards
+-   file support
 
 and other things.
