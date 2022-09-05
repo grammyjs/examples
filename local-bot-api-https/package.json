@@ -1,14 +1,14 @@
 {
-    "scripts": {
-        "bot": "ts-node"
-    },
-    "dependencies": {
-        "express": "^4.17.2",
-        "grammy": "^1.6.1"
-    },
-    "devDependencies": {
-        "@types/express": "^4.17.13",
-        "@types/node": "^17.0.8",
-        "ts-node": "^10.4.0"
-    }
+  "scripts": {
+    "bot": "ts-node"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "grammy": "^1.6.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.8",
+    "ts-node": "^10.4.0"
+  }
 }

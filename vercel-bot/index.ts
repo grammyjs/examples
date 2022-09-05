@@ -1,7 +1,5 @@
-import { Bot } from 'grammy'
+import { Bot } from "grammy";
 
-const bot = new Bot(process.env['BOT_TOKEN']) // <-- Set your token in the vercel environment variable
+const bot = new Bot(process.env["BOT_TOKEN"]); // <-- Set your token in the vercel environment variable
 
-bot.api.setWebhook(process.env['WEBHOOK'])
-
-
+bot.api.setWebhook(process.env["WEBHOOK"]);

@@ -1,23 +1,23 @@
 {
-    "name": "@grammyjs/examples",
-    "version": "1.0.0",
-    "description": "Example bots to help you get started with grammY",
-    "scripts": {
-        "bot": "ts-node"
-    },
-    "keywords": [],
-    "author": "KnorpelSenf",
-    "license": "MIT",
-    "dependencies": {
-        "@grammyjs/menu": "^1.0.2",
-        "@grammyjs/router": "^1.1.1",
-        "@grammyjs/runner": "^1.0.2",
-        "@grammyjs/transformer-throttler": "^1.0.1",
-        "grammy": "^1.4.3"
-    },
-    "devDependencies": {
-        "@types/node": "^16.11.6",
-        "ts-node": "^10.4.0",
-        "typescript": "^4.4.4"
-    }
+  "name": "@grammyjs/examples",
+  "version": "1.0.0",
+  "description": "Example bots to help you get started with grammY",
+  "scripts": {
+    "bot": "ts-node"
+  },
+  "keywords": [],
+  "author": "KnorpelSenf",
+  "license": "MIT",
+  "dependencies": {
+    "@grammyjs/menu": "^1.0.2",
+    "@grammyjs/router": "^1.1.1",
+    "@grammyjs/runner": "^1.0.2",
+    "@grammyjs/transformer-throttler": "^1.0.1",
+    "grammy": "^1.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
 }
