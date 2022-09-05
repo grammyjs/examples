@@ -11,7 +11,7 @@ export const bot = new Bot(process.env.BOT_TOKEN as string, {
             agent: new Agent({
                 keepAlive: true,
                 // 3. Disable Bot API server certificate verification
-                rejectUnauthorized: false
+                rejectUnauthorized: false,
             }),
         },
     },
