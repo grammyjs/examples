@@ -5,7 +5,7 @@ grammY.
 
 1. Contact [@BotFather](https://t.me/BotFather) to create a bot and get its
    token.
-2. Clone the epository.
+2. Clone the repository.
 3. Paste your bot’s token to the source files of the examples you would like to
    run (e.g. `./echo.ts`).
 4. Run `npm install` from the root.
@@ -25,7 +25,7 @@ A simple bot that echoes the text messages it receives.
 ## Send a Single Message ([`send-message`](./send-message.ts))
 
 Not a real bot, only an illustration of sending a single message once. Might
-useful in scripts.
+be useful in scripts.
 
 ## Nested Menus ([`menu`](./menu.ts))
 
