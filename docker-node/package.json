@@ -1,0 +1,16 @@
+{
+    "scripts": {
+        "typecheck": "tsc",
+        "dev": "tsc-watch --onSuccess \"tsx ./main.ts\"",
+        "start": "tsx ./main.ts"
+    },
+    "dependencies": {
+        "grammy": "^1.10.0",
+        "tsx": "^3.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.8",
+        "tsc-watch": "^6.0.0",
+        "typescript": "^4.0.0"
+    }
+}

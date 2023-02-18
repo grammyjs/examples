@@ -1,0 +1,12 @@
+version: '3'
+services:
+
+    bot:
+        build:
+            context: .
+        environment:
+            # Set your bot token (get it from https://t.me/BotFather)
+            - BOT_TOKEN= # <-- place your token here
+        volumes:
+            - ".:/app"
+        command: npm run dev

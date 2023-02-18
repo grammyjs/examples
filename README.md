@@ -94,6 +94,10 @@ Example bot that can run on
 
 Example Deno bot that can run using Docker.
 
+## [Dockerizing Node.js Bot Example »](./docker-node)
+
+Example Node.js bot that can run using Docker.
+
 ## [Local Bot API Example »](./local-bot-api)
 
 Use Docker to setup a
