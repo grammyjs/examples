@@ -1,6 +1,6 @@
 ## Dockerizing Node.js Bot Example
 
-This example illustrates how to run a Node.js bot using Docker.
+This example illustrates how to use Docker to run grammY bots written for Node.js.
 
 1. Create a bot with [@BotFather](https://t.me/BotFather), and get the **bot
    token**

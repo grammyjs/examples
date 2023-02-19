@@ -1,6 +1,6 @@
 ## Dockerizing Deno Bot Example
 
-This example illustrates how to run a Deno bot using Docker.
+This example illustrates how to use Docker to run grammY bots written for Deno.
 
 1. Create a bot with [@BotFather](https://t.me/BotFather), and get the **bot
    token**
