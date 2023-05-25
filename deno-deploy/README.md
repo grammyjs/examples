@@ -23,7 +23,7 @@ https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=https://<PROJECT_NAME>.de
 ### Deploying with `deployctl` (advanced)
 
 4. Install [`deployctl`](https://github.com/denoland/deployctl)
-5. Create a new [access token](https://dash.deno.com/user/access-tokens). Save
+5. Create a new [access token](https://dash.deno.com/account#access-tokens). Save
    it somewhere
 6. Run this command to deploy:
    `deployctl deploy --project <PROJECT_NAME> ./server.ts --prod --token <ACCESS_TOKEN>`
