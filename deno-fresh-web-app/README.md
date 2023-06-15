@@ -12,17 +12,17 @@
 
 ### Deploying with GitHub (easy)
 
-4. Push your project to a GitHub repository.
-5. Set up GitHub Integration in the project’s settings. Select `main.ts` as
+5. Push your project to a GitHub repository.
+6. Set up GitHub Integration in the project’s settings. Select `main.ts` as
    entry point.
-6. You’re done! New versions will be automatically deployed on push.
+7. You’re done! New versions will be automatically deployed on push.
 
 ### Deploying with `deployctl` (advanced)
 
-4. Install [`deployctl`](https://github.com/denoland/deployctl)
-5. Create a new [access token](https://dash.deno.com/account#access-tokens). Save
+5. Install [`deployctl`](https://github.com/denoland/deployctl)
+6. Create a new [access token](https://dash.deno.com/account#access-tokens). Save
    it somewhere
-6. Run this command to deploy:
+7. Run this command to deploy:
    `deployctl deploy --project <PROJECT_NAME> ./main.ts --prod --token <ACCESS_TOKEN>`
 
 ## Running the bot and web app locally
