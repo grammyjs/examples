@@ -1,4 +1,4 @@
-## Dockerizing Deno Bot Example
+## Docker Example (Deno)
 
 This example illustrates how to use Docker to run grammY bots written for Deno.
 

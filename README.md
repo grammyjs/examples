@@ -90,11 +90,11 @@ Example bot that can run on [Deta](https://deta.sh/).
 Example bot that can run on
 [Supabase Edge Functions](https://supabase.com/edge-functions).
 
-## [Dockerizing Deno Bot Example »](./docker-deno)
+## [Docker Example (Deno) »](./docker-deno)
 
 Example Deno bot that can run using Docker.
 
-## [Dockerizing Node.js Bot Example »](./docker-node)
+## [Docker Example (Node.js) »](./docker-node)
 
 Example Node.js bot that can run using Docker.
 

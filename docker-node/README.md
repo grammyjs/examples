@@ -1,4 +1,4 @@
-## Dockerizing Node.js Bot Example
+## Docker Example (Node.js)
 
 This example illustrates how to use Docker to run grammY bots written for Node.js.
 
