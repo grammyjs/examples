@@ -58,6 +58,11 @@ illustratation on how to use them.)
 Illustrates how to use the [`grammY runner`](https://github.com/grammyjs/runner)
 to run large bots.
 
+## Fastify Example ([`fastify`](./fastify.ts))
+
+Simple example for using [`grammY`](https://github.com/grammyjs/grammy)
+with [`Fastify`](https://github.com/fastify/fastify)
+
 ## Scaling Example ([`scaling`](./scaling/index.ts))
 
 NOTE: This example is not endorsement of any directory structure. See
