@@ -1,34 +1,34 @@
+// npm i grammy fastify @ngrok/ngrok
 import { Bot, webhookCallback } from 'grammy';
-import Fastify from 'fastify';
+import fastify from 'fastify';
+import ngrok from '@ngrok/ngrok';
 
-// This example to use grammY with Fastify
+// This example to use grammY with Fastify, Ngrok with secret_token
 
 // Fastify server instance
-const app = Fastify();
+const server = Fastify();
 
-const TOKEN = ''; // <-- place your token inside this string
+const { TOKEN, PORT, SECRET_TOKEN } = process.env;
 const bot = new Bot(TOKEN);
 
-bot.on('message:text', ctx => ctx.reply(ctx.message.text));
+bot.command('start', ctx => ctx.reply("Hi, I'm run faster than you :)"));
+
+bot.on('message:text', ctx => ctx.reply(`You said: ${ctx.message.text}`));
 
 // Receive webhook updates on path https://example.com/<YOUR-TOKEN>
-// NOTE: if you want to use NGROK, just run this command in ngrok sheel
-// ngrok http 3000
-// and replace the URL with new URL from NGROK: <NGROK-URL>/<YOUR-TOKEN>
-bot.api.setWebhook(''); // <-- add your webhook URL 
-
-app.post(`/${TOKEN}`, webhookCallback(bot, 'fastify'));
+server.post(`/${TOKEN}`, webhookCallback(bot, 'fastify', { secretToken: SECRET_TOKEN }));
 
 // Fastify error handler
-app.setErrorHandler(async error => {
-    console.error(error);
+server.setErrorHandler(async error => {
+  console.error(error);
 });
 
 // Run The Server!
-app.listen({ port: 3000, host: '0.0.0.0' }, (error, address) => {
-    if (error) {
-        console.error(error);
-        process.exit(1);
-    }
-    console.log(`Server listening at ${address}`);
+server.listen({ port: +PORT }, async (error) => {
+  if (error) {
+    console.error(error);
+    process.exit(1);
+  }
+  const url = await ngrok.connect(+PORT);
+  await bot.api.setWebhook(`${url}/${TOKEN}`, { secret_token: SECRET_TOKEN });
 });
