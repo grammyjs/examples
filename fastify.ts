@@ -6,7 +6,8 @@ import ngrok from '@ngrok/ngrok';
 // This example to use grammY with Fastify, Ngrok with secret_token
 
 // Fastify server instance
-const server = Fastify();
+const server = fastify();
+
 
 const { TOKEN, PORT, SECRET_TOKEN } = process.env;
 const bot = new Bot(TOKEN);
