@@ -61,7 +61,7 @@ to run large bots.
 ## Fastify Example ([`fastify`](./fastify.ts))
 
 Simple example for using [`grammY`](https://github.com/grammyjs/grammy)
-with [`Fastify`](https://github.com/fastify/fastify)
+with [`Fastify`](https://github.com/fastify/fastify) and [`Ngrok`](https://ngrok.com/)
 
 ## Scaling Example ([`scaling`](./scaling/index.ts))
 
