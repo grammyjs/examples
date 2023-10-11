@@ -1,4 +1,4 @@
-# grammY Examples
+# grammY examples
 
 This repository contains various bots and setups to help you get started with
 grammY.
