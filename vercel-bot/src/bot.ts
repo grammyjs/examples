@@ -1,7 +1,7 @@
 import { Bot } from 'grammy'
 
 const {
-    TELEGRAM_BOT_TOKEN: token = "",
+    BOT_TOKEN: token = '',
 } = process.env
 
 // Set your token in the vercel environment variable
