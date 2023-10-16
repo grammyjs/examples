@@ -2,5 +2,5 @@
 
 You can deploy your bots to Vercel as a serverless function.
 
-Please run the `index.js` file in Vercel’s package command to set your webhook
-address.
+Webhook will be set automatically by execute `scripts/build.ts` during
+[Vercel build step](https://vercel.com/docs/deployments/builds)

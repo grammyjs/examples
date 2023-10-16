@@ -1,8 +1,4 @@
 {
-    "functions": {
-        "api/index.js": {
-            "memory": 1024,
-            "maxDuration": 10
-        }
-    }
+    "installCommand": "npm i --omit=dev",
+    "buildCommand": "npx tsc scripts/build.ts"
 }
