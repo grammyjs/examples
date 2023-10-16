@@ -1,0 +1,5 @@
+{
+    "outputDirectory": ".",
+    "installCommand": "npm i --omit=dev",
+    "buildCommand": "npx ts-node scripts/build.ts"
+}
