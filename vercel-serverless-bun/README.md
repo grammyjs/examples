@@ -11,3 +11,5 @@ Webhook will be set automatically by execute `scripts/build.ts` during
 > which is not related to grammY or any official plugins.
 >
 > Please do not report about them if you are using this experiment.
+> We don't try to make grammY or any of the plugins compatible with bun.
+> If it works anyway—great!
