@@ -15,7 +15,7 @@ type MyContext = Context & SessionFlavor<SessionData>
 // Create a bot
 const bot = new Bot<MyContext>('') // <-- place your token inside this string
 
-// Note that using `session()` will only save the data in-memory. If the Node
+// Note that using `session()` will only save the data in-memory. If the Node.js
 // process terminates, all data will be lost. A bot running in production will
 // need some sort of database or file storage to persist data between restarts.
 // Confer the grammY documentation to find out how to store data with your bot.
