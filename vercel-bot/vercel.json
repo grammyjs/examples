@@ -1,4 +1,0 @@
-{
-    "installCommand": "npm i --omit=dev",
-    "buildCommand": "npx tsc scripts/build.ts"
-}
