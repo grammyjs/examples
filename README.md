@@ -78,10 +78,6 @@ orchestrated together, including
 and
 [`routers`](https://grammy.dev/plugins/router.html#combining-routers-with-sessions).
 
-## [Vercel Examples »](./setups/vercel)
-
-Example bot that can run on [Vercel](https://vercel.com/).
-
 ## [Deno Deploy Example »](./setups/deno-deploy)
 
 Example bot that can run on [Deno Deploy](https://deno.com/deploy/).
@@ -94,6 +90,32 @@ Example bot that can run on [Deta](https://deta.sh/).
 
 Example bot that can run on
 [Supabase Edge Functions](https://supabase.com/edge-functions).
+
+## [Vercel Serverless Node Example »](./setups/vercel-serverless-node)
+
+Example bot using [Node.js](https://nodejs.org) on
+[Vercel Serverless Functions](https://vercel.com/docs/functions/serverless-functions).
+
+## [Vercel Serverless Deno Example »](./setups/vercel-serverless-deno)
+
+> 🚧 Under development and may contain bugs or loss of functionality
+
+Example bot using [Deno](https://deno.com) on
+[Vercel Serverless Functions](https://vercel.com/docs/functions/serverless-functions).
+
+## [Vercel Serverless Bun Example »](./setups/vercel-serverless-bun)
+
+> 🚧 Under development and may contain bugs or loss of functionality
+
+Example bot using [Bun](https://bun.sh) on
+[Vercel Serverless Functions](https://vercel.com/docs/functions/serverless-functions).
+
+## [Vercel Edge Runtime Example »](./setups/vercel-edge-runtime)
+
+> 🚧 Under development and may contain bugs or loss of functionality
+
+Example bot using
+[Vercel Edge Functions](https://vercel.com/docs/functions/edge-functions).
 
 ## [Docker Example (Deno) »](./setups/docker-deno)
 
