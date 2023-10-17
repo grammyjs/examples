@@ -15,7 +15,7 @@ type MyContext = Context & LazySessionFlavor<SessionData>
 const bot = new Bot<MyContext>('') // <-- place your token inside this string
 
 // Note that using `lazySession()` will only save the data in-memory. If the
-// Node process terminates, all data will be lost. A bot running in production
+// Node.js process terminates, all data will be lost. A bot running in production
 // will need some sort of database or file storage to persist data between
 // restarts. Confer the grammY documentation to find out how to store data with
 // your bot.

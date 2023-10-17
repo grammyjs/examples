@@ -91,28 +91,22 @@ Example bot that can run on [Deta](https://deta.sh/).
 Example bot that can run on
 [Supabase Edge Functions](https://supabase.com/edge-functions).
 
-## [Vercel Serverless Node Example »](./setups/vercel-serverless-node)
+## [Vercel Serverless Node.js Example »](./setups/vercel-serverless-node)
 
 Example bot using [Node.js](https://nodejs.org) on
 [Vercel Serverless Functions](https://vercel.com/docs/functions/serverless-functions).
 
 ## [Vercel Serverless Deno Example »](./setups/vercel-serverless-deno)
 
-> 🚧 Under development and may contain bugs or loss of functionality
-
 Example bot using [Deno](https://deno.com) on
 [Vercel Serverless Functions](https://vercel.com/docs/functions/serverless-functions).
 
 ## [Vercel Serverless Bun Example »](./setups/vercel-serverless-bun)
 
-> 🚧 Under development and may contain bugs or loss of functionality
-
 Example bot using [Bun](https://bun.sh) on
 [Vercel Serverless Functions](https://vercel.com/docs/functions/serverless-functions).
 
 ## [Vercel Edge Runtime Example »](./setups/vercel-edge-runtime)
-
-> 🚧 Under development and may contain bugs or loss of functionality
 
 Example bot using
 [Vercel Edge Functions](https://vercel.com/docs/functions/edge-functions).
@@ -141,9 +135,9 @@ with a self-signed TLS certificate, and run your bot on it.
 
 We could have some more examples here, for example:
 
--   command handling
--   filter queries
--   inline keyboards
--   file support
+- command handling
+- filter queries
+- inline keyboards
+- file support
 
 and other things.
