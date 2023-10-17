@@ -78,28 +78,28 @@ orchestrated together, including
 and
 [`routers`](https://grammy.dev/plugins/router.html#combining-routers-with-sessions).
 
-## [Vercel Examples »](./vercel)
+## [Vercel Examples »](./setups/vercel)
 
 Example bot that can run on [Vercel](https://vercel.com/).
 
-## [Deno Deploy Example »](./deno-deploy)
+## [Deno Deploy Example »](./setups/deno-deploy)
 
 Example bot that can run on [Deno Deploy](https://deno.com/deploy/).
 
-## [Deta Example »](./deta)
+## [Deta Example »](./setups/deta)
 
 Example bot that can run on [Deta](https://deta.sh/).
 
-## [Supabase Edge Functions Example »](./supabase-edge-functions)
+## [Supabase Edge Functions Example »](./setups/supabase-edge-functions)
 
 Example bot that can run on
 [Supabase Edge Functions](https://supabase.com/edge-functions).
 
-## [Docker Example (Deno) »](./docker-deno)
+## [Docker Example (Deno) »](./setups/docker-deno)
 
 Example Deno bot that can run using Docker.
 
-## [Docker Example (Node.js) »](./docker-node)
+## [Docker Example (Node.js) »](./setups/docker-node)
 
 Example Node.js bot that can run using Docker.
 
