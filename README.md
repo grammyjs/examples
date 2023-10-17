@@ -78,7 +78,7 @@ orchestrated together, including
 and
 [`routers`](https://grammy.dev/plugins/router.html#combining-routers-with-sessions).
 
-## [Vercel Example »](./vercel-bot)
+## [Vercel Example »](./vercel-serverless-node)
 
 Example bot that can run on [Vercel](https://vercel.com/).
 
