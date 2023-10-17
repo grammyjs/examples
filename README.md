@@ -91,7 +91,7 @@ Example bot that can run on [Deta](https://deta.sh/).
 Example bot that can run on
 [Supabase Edge Functions](https://supabase.com/edge-functions).
 
-## [Vercel Serverless Node Example »](./setups/vercel-serverless-node)
+## [Vercel Serverless Node.js Example »](./setups/vercel-serverless-node)
 
 Example bot using [Node.js](https://nodejs.org) on
 [Vercel Serverless Functions](https://vercel.com/docs/functions/serverless-functions).
