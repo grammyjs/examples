@@ -98,21 +98,15 @@ Example bot using [Node.js](https://nodejs.org) on
 
 ## [Vercel Serverless Deno Example »](./setups/vercel-serverless-deno)
 
-> Expect limited functionality.
-
 Example bot using [Deno](https://deno.com) on
 [Vercel Serverless Functions](https://vercel.com/docs/functions/serverless-functions).
 
 ## [Vercel Serverless Bun Example »](./setups/vercel-serverless-bun)
 
-> Expect limited functionality.
-
 Example bot using [Bun](https://bun.sh) on
 [Vercel Serverless Functions](https://vercel.com/docs/functions/serverless-functions).
 
 ## [Vercel Edge Runtime Example »](./setups/vercel-edge-runtime)
-
-> Expect limited functionality.
 
 Example bot using
 [Vercel Edge Functions](https://vercel.com/docs/functions/edge-functions).

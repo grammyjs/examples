@@ -1,7 +1,8 @@
 # [grammY](https://grammy.dev) on [Vercel](https://vercel.dev)
 
-You can deploy your bots to Vercel as a serverless [Deno](https://deno.com)
-function.
+You can deploy your bots to Vercel as a serverless function that runs on
+[Deno](https://deno.com).
 
-Webhook will be set automatically by execute `scripts/build.ts` during
-[Vercel build step](https://vercel.com/docs/deployments/builds)
+Webhook will be set automatically during the
+[build](https://vercel.com/docs/deployments/builds) when `scripts/build.ts` is
+run.
