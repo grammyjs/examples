@@ -111,6 +111,10 @@ Example bot using [Bun](https://bun.sh) on
 Example bot using
 [Vercel Edge Functions](https://vercel.com/docs/functions/edge-functions).
 
+## [AWS Lambda Example »](./setups/aws-lambda)
+
+Example bot that can run using [AWS Lambda](https://aws.amazon.com/lambda/).
+
 ## [Docker Example (Deno) »](./setups/docker-deno)
 
 Example Deno bot that can run using Docker.
