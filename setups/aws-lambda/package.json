@@ -1,0 +1,10 @@
+{
+    "main": "index.js",
+    "dependencies": {
+        "grammy": "^1.19.2"
+    },
+    "scripts": {
+        "build": "npx tsc",
+        "dev": "sam local start-api"
+    }
+}
