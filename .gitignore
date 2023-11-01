@@ -21,3 +21,5 @@ package-lock.json
 *.tgz
 
 .DS_Store
+
+*.js
