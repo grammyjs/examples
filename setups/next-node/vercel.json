@@ -1,0 +1,4 @@
+{
+    "framework": "nextjs",
+    "buildCommand": "npx ts-node scripts/build.ts && next build"
+}
