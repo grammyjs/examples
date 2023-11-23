@@ -1,7 +1,7 @@
-// npm i grammy fastify @ngrok/ngrok
+// npm i grammy fastify @ngrok/ngrok@0.9.0
 import { Bot, webhookCallback } from 'grammy';
 import fastify from 'fastify';
-import ngrok from '@ngrok/ngrok';
+import ngrok from '@ngrok/ngrok'; // Note: This example is pinned to 0.9.0 (unstable)
 
 // This example to use grammY with Fastify, Ngrok with secret_token
 
@@ -30,6 +30,6 @@ server.listen({ port: +PORT }, async (error) => {
     console.error(error);
     process.exit(1);
   }
-  const url = await ngrok.connect(+PORT);
-  await bot.api.setWebhook(`${url}/${TOKEN}`, { secret_token: SECRET_TOKEN });
+  const listener = await ngrok.connect(+PORT);
+  await bot.api.setWebhook(`${listener.url()}/${TOKEN}`, { secret_token: SECRET_TOKEN });
 });
