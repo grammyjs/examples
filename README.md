@@ -82,10 +82,6 @@ and
 
 Example bot that can run on [Deno Deploy](https://deno.com/deploy/).
 
-## [Deta Example »](./setups/deta)
-
-Example bot that can run on [Deta](https://deta.sh/).
-
 ## [Supabase Edge Functions Example »](./setups/supabase-edge-functions)
 
 Example bot that can run on
