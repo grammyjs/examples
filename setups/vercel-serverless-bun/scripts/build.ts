@@ -1,7 +1,8 @@
 import { bot } from '../src/bot'
 
 const {
-    VERCEL_URL: host,
+    VERCEL_URL: defaultHost,
+    VERCEL_BRANCH_URL: host = defaultHost,
     // set your webhook address or use default Vercel deployment url
     WEBHOOK: webhook = `https://${host}/`,
 } = process.env
