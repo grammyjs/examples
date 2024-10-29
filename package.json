@@ -9,6 +9,8 @@
     "author": "KnorpelSenf",
     "license": "MIT",
     "dependencies": {
+        "@grammyjs/conversations": "^1.2.0",
+        "@grammyjs/hydrate": "^1.4.1",
         "@grammyjs/menu": "^1.0.2",
         "@grammyjs/router": "^1.1.1",
         "@grammyjs/runner": "^1.0.2",

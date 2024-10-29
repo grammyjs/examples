@@ -24,8 +24,8 @@ A simple bot that echoes the text messages it receives.
 
 ## Send a Single Message ([`send-message`](./send-message.ts))
 
-Not a real bot, only an illustration of sending a single message once. Might
-be useful in scripts.
+Not a real bot, only an illustration of sending a single message once. Might be
+useful in scripts.
 
 ## Nested Menus ([`menu`](./menu.ts))
 
@@ -36,6 +36,11 @@ complex menus when all the data is generated at runtime.
 ## Menus with Media ([`menu-with-photo`](./menu-with-photo.ts))
 
 Similar to the nested menu example, but with photos.
+
+## Menus with Conversation ([`menu-with-conversation`](./menu-with-conversation.ts))
+
+Similar to the nested menu example, but with buttons that enter conversations
+(short chats that can ask the user for additional information).
 
 ## Sessions ([`stats`](./stats.ts))
 
@@ -60,8 +65,9 @@ to run large bots.
 
 ## Fastify Example ([`fastify`](./fastify.ts))
 
-Simple example for using [`grammY`](https://github.com/grammyjs/grammy)
-with [`Fastify`](https://github.com/fastify/fastify) and [`Ngrok`](https://ngrok.com/)
+Simple example for using [`grammY`](https://github.com/grammyjs/grammy) with
+[`Fastify`](https://github.com/fastify/fastify) and
+[`Ngrok`](https://ngrok.com/)
 
 ## Scaling Example ([`scaling`](./scaling/index.ts))
 
