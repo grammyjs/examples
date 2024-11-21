@@ -15,10 +15,10 @@ interface SessionData {
 type MyContext = ConversationFlavor<Context & SessionFlavor<SessionData>>;
 
 type NameContext = Context;
-type NameConversation = Conversation<NameContext>;
+type NameConversation = Conversation<MyContext, NameContext>;
 
 type EmailContext = HydrateFlavor<Context>;
-type EmailConversation = Conversation<EmailContext>;
+type EmailConversation = Conversation<MyContext, EmailContext>;
 
 const bot = new Bot<MyContext>("");
 
@@ -40,28 +40,41 @@ const about = new Menu<MyContext>("about")
 menu.register(about);
 
 async function name(conversation: NameConversation, ctx: NameContext) {
-    const settingsClone = conversation.menu(settings);
+    // Define the structure that the ouside menu expects.
+    const settingsClone = conversation.menu("settings")
+        .text("Set name")
+        .text("Set email")
+        .back("Back");
+
+    // Override the outside menu when the conversation is entered.
     const nameMenu = conversation.menu().text("Cancel", async (ctx) => {
         await ctx.menu.nav("settings", { immediate: true });
         await conversation.halt();
     });
     await ctx.editMessageReplyMarkup({ reply_markup: nameMenu });
+
     await ctx.reply("What's your name?");
     const name = await conversation.form.text();
-    await conversation.external((ctx: MyContext) => ctx.session.name = name);
+    await conversation.external((ctx) => ctx.session.name = name);
     await ctx.reply("Name set!");
+
     await ctx.editMessageReplyMarkup({ reply_markup: settingsClone });
 }
 async function email(conversation: EmailConversation, ctx: EmailContext) {
-    const settingsClone = conversation.menu(settings);
+    // Define the structure that the ouside menu expects.
+    const settingsClone = conversation.menu("settings")
+        .text("Set name")
+        .text("Set email")
+        .back("Back");
+
+    // Override the outside menu when the conversation is entered.
     const emailMenu = conversation.menu().text("Cancel", async (ctx) => {
         await ctx.menu.nav("settings", { immediate: true });
         await conversation.halt();
     });
     await ctx.editMessageReplyMarkup({ reply_markup: emailMenu });
-    const currentName = await conversation.external((ctx: MyContext) =>
-        ctx.session.name
-    );
+
+    const currentName = await conversation.external((ctx) => ctx.session.name);
     const question = await ctx.reply(
         currentName
             ? `What's your email, ${currentName}?`
@@ -70,9 +83,10 @@ async function email(conversation: EmailConversation, ctx: EmailContext) {
     const email = await conversation.form.text({
         action: (ctx) => ctx.deleteMessage(),
     });
+    await conversation.external((ctx: MyContext) => ctx.session.email = email);
+
     await Promise.all([
         question.delete(),
-        conversation.external((ctx: MyContext) => ctx.session.email = email),
         ctx.reply("Email set!"),
         ctx.editMessageReplyMarkup({ reply_markup: settingsClone }),
     ]);
