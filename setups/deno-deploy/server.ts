@@ -1,5 +1,6 @@
+// run the bot on Deno Deploy
 import { bot } from "./bot.ts";
-import { webhookCallback } from "./deps.deno.ts";
+import { webhookCallback } from "grammy";
 
 const handleUpdate = webhookCallback(bot, "std/http");
 

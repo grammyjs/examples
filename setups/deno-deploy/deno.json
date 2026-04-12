@@ -1,0 +1,8 @@
+{
+  "tasks": {
+    "bot": "deno run -A --env --watch poll.ts"
+  },
+  "imports": {
+    "grammy": "npm:grammy@^1.42.0"
+  }
+}
