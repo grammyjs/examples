@@ -11,17 +11,17 @@ export interface WebAppUser {
     language_code?: string;
     is_premium?: boolean;
     photo_url?: string;
-  }
+}
 
-  export interface WebAppChat {
+export interface WebAppChat {
     id: number;
     type: "group" | "supergroup" | "channel";
     title: string;
     username?: string;
     photo_url?: string;
-  }
+}
 
-  export interface WebAppInitData {
+export interface WebAppInitData {
     query_id?: string;
     auth_date: number;
     hash: string;
@@ -32,9 +32,9 @@ export interface WebAppUser {
     chat?: WebAppChat;
     chat_type?: "sender" | "private" | "group" | "supergroup" | "channel";
     chat_instance?: string;
-  }
+}
 
-  export interface ThemeParams {
+export interface ThemeParams {
     bg_color: `#${string}`;
     secondary_bg_color: `#${string}`;
     text_color: `#${string}`;
@@ -42,26 +42,26 @@ export interface WebAppUser {
     link_color: `#${string}`;
     button_color: `#${string}`;
     button_text_color: `#${string}`;
-  }
+}
 
-  export interface HapticFeedback {
+export interface HapticFeedback {
     impactOccurred: (
-      style: "light" | "medium" | "heavy" | "rigid" | "soft"
+        style: "light" | "medium" | "heavy" | "rigid" | "soft",
     ) => HapticFeedback;
     notificationOccurred: (
-      type: "error" | "success" | "warning"
+        type: "error" | "success" | "warning",
     ) => HapticFeedback;
     selectionChanged: () => HapticFeedback;
-  }
+}
 
-  export interface BackButton {
+export interface BackButton {
     show: VoidFunction;
     hide: VoidFunction;
     onClick: (cb: VoidFunction) => void;
     offClick: (cb: VoidFunction) => void;
-  }
+}
 
-  export interface MainButton {
+export interface MainButton {
     isActive: boolean;
     isVisible: boolean;
     isProgressVisible: boolean;
@@ -75,17 +75,17 @@ export interface WebAppUser {
     offClick: (callback: VoidFunction) => void;
     setText: (text: string) => void;
     setParams: (params: {
-      color?: string;
-      text?: string;
-      text_color?: string;
-      is_active?: boolean;
-      is_visible?: boolean;
+        color?: string;
+        text?: string;
+        text_color?: string;
+        is_active?: boolean;
+        is_visible?: boolean;
     }) => void;
-  }
+}
 
-  export type InvoiceStatuses = "pending" | "failed" | "cancelled" | "paid";
+export type InvoiceStatuses = "pending" | "failed" | "cancelled" | "paid";
 
-  export type EventNames =
+export type EventNames =
     | "invoiceClosed"
     | "settingsButtonClicked"
     | "backButtonClicked"
@@ -96,7 +96,7 @@ export interface WebAppUser {
     | "qrTextReceived"
     | "clipboardTextReceived";
 
-  export type EventParams = {
+export type EventParams = {
     invoiceClosed: { url: string; status: InvoiceStatuses };
     settingsButtonClicked: void;
     backButtonClicked: void;
@@ -106,31 +106,33 @@ export interface WebAppUser {
     popupClosed: { button_id: string | null };
     qrTextReceived: { data: string };
     clipboardTextReceived: { data: string };
-  };
+};
 
-  export type PopupParams = {
+export type PopupParams = {
     title?: string;
     message: string;
     buttons?: PopupButton[];
-  };
+};
 
-  export type PopupButton = {
-    id?: string;
-  } & (
-    | {
-        type: "default" | "destructive";
-        text: string;
-      }
-    | {
-        type: "ok" | "close" | "cancel";
-      }
-  );
+export type PopupButton =
+    & {
+        id?: string;
+    }
+    & (
+        | {
+            type: "default" | "destructive";
+            text: string;
+        }
+        | {
+            type: "ok" | "close" | "cancel";
+        }
+    );
 
-  export type ScanQrPopupParams = {
+export type ScanQrPopupParams = {
     text?: string;
-  };
+};
 
-  export type Platforms =
+export type Platforms =
     | "android"
     | "android_x"
     | "ios"
@@ -141,7 +143,7 @@ export interface WebAppUser {
     | "unigram"
     | "unknown";
 
-  export interface WebApp {
+export interface WebApp {
     isExpanded: boolean;
     viewportHeight: number;
     viewportStableHeight: number;
@@ -154,12 +156,12 @@ export interface WebAppUser {
     initData: string;
     colorScheme: "light" | "dark";
     onEvent: <T extends EventNames>(
-      eventName: T,
-      callback: (params: EventParams[T]) => unknown
+        eventName: T,
+        callback: (params: EventParams[T]) => unknown,
     ) => void;
     offEvent: <T extends EventNames>(
-      eventName: T,
-      callback: (params: EventParams[T]) => unknown
+        eventName: T,
+        callback: (params: EventParams[T]) => unknown,
     ) => void;
     sendData: (data: unknown) => void;
     close: VoidFunction;
@@ -172,36 +174,39 @@ export interface WebAppUser {
     version: string;
     isVersionAtLeast: (version: string) => boolean;
     openInvoice: (
-      url: string,
-      callback?: (status: InvoiceStatuses) => unknown
+        url: string,
+        callback?: (status: InvoiceStatuses) => unknown,
     ) => void;
     setHeaderColor: (
-      color: "bg_color" | "secondary_bg_color" | `#${string}`
+        color: "bg_color" | "secondary_bg_color" | `#${string}`,
     ) => void;
     setBackgroundColor: (
-      color: "bg_color" | "secondary_bg_color" | `#${string}`
+        color: "bg_color" | "secondary_bg_color" | `#${string}`,
     ) => void;
     showConfirm: (
-      message: string,
-      callback?: (confirmed: boolean) => void
+        message: string,
+        callback?: (confirmed: boolean) => void,
     ) => void;
-    showPopup: (params: PopupParams, callback?: (id?: string) => unknown) => void;
+    showPopup: (
+        params: PopupParams,
+        callback?: (id?: string) => unknown,
+    ) => void;
     showAlert: (message: string, callback?: () => unknown) => void;
     enableClosingConfirmation: VoidFunction;
     disableClosingConfirmation: VoidFunction;
     showScanQrPopup: (
-      params: ScanQrPopupParams,
-      callback?: (text: string) => void | true
+        params: ScanQrPopupParams,
+        callback?: (text: string) => void | true,
     ) => void;
     closeScanQrPopup: () => void;
     readTextFromClipboard: (callback?: (text: string) => unknown) => void;
     ready: VoidFunction;
     switchInlineQuery: (
-      query: string,
-      chooseChatTypes?: Array<"users" | "bots" | "groups" | "channels">
+        query: string,
+        chooseChatTypes?: Array<"users" | "bots" | "groups" | "channels">,
     ) => void;
-  }
+}
 
-  export interface Telegram {
+export interface Telegram {
     WebApp: WebApp;
-  }
+}

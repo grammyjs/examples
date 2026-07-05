@@ -9,12 +9,11 @@ const composer = new Composer<GrammyContext>();
 composer.use(start);
 
 export const listOfCommands: Array<{
-  command: string;
-  description: string;
-  show: boolean;
+    command: string;
+    description: string;
+    show: boolean;
 }> = [
-  { command: "start", description: "Start the bot", show: true },
-
+    { command: "start", description: "Start the bot", show: true },
 ];
 
 export default composer;

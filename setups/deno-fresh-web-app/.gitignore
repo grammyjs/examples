@@ -5,4 +5,7 @@
 .env.production.local
 .env.local
 
-*.lock
+# Fresh build directory
+_fresh/
+# npm + other dependencies
+node_modules/
