@@ -3,6 +3,6 @@
     "bot": "deno run -A --env --watch poll.ts"
   },
   "imports": {
-    "grammy": "npm:grammy@^1.42.0"
+    "grammy": "npm:grammy@^1.44.0/web"
   }
 }

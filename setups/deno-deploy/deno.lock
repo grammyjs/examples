@@ -1,11 +1,11 @@
 {
   "version": "5",
   "specifiers": {
-    "npm:grammy@^1.42.0": "1.42.0"
+    "npm:grammy@^1.44.0": "1.44.0"
   },
   "npm": {
-    "@grammyjs/types@3.26.0": {
-      "integrity": "sha512-jlnyfxfev/2o68HlvAGRocAXgdPPX5QabG7jZlbqC2r9DZyWBfzTlg+nu3O3Fy4EhgLWu28hZ/8wr7DsNamP9A=="
+    "@grammyjs/types@3.28.0": {
+      "integrity": "sha512-4JvXCdxRZHCje0M4gHzLwtB4bLno3WD28xd8CNfk4POWIu73BFnSvGeW6OQ5gPem4eYTEwkD9yDaXssixl6tMQ=="
     },
     "abort-controller@3.0.0": {
       "integrity": "sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==",
@@ -22,8 +22,8 @@
     "event-target-shim@5.0.1": {
       "integrity": "sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ=="
     },
-    "grammy@1.42.0": {
-      "integrity": "sha512-1AdCge+AkjSdp2FwfICSFnVbl8Mq3KVHJDy+DgTI9+D6keJ0zWALPRKas5jv/8psiCzL4N2cEOcGW7O45Kn39g==",
+    "grammy@1.44.0": {
+      "integrity": "sha512-gGVykS5+c5f1tPV97LuU6IDRMawE2NzpwM9pNz58HQ35IZXDnYL3VOLvNzYognPSeBIOSzQXRu5w96V0aY8y8A==",
       "dependencies": [
         "@grammyjs/types",
         "abort-controller",
@@ -56,7 +56,7 @@
   },
   "workspace": {
     "dependencies": [
-      "npm:grammy@^1.42.0"
+      "npm:grammy@^1.44.0"
     ]
   }
 }
