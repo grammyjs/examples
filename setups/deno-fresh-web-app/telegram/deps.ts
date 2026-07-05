@@ -1,3 +1,2 @@
 export * from "grammy";
-export * from "grammy";
-export * from "grammy_types";
+export * from "@grammyjs/types";

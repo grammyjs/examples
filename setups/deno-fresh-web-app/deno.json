@@ -1,12 +1,62 @@
 {
-  "lock": false,
-  "tasks": {
-    "bot": "deno run --unstable -A --watch=telegram/,utils/ bot.ts",
-    "start": "deno run --unstable -A --watch=static/,routes/ dev.ts"
-  },
-  "importMap": "./import_map.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
-  }
+    "nodeModulesDir": "manual",
+    "unstable": ["kv"],
+    "tasks": {
+        "check": "deno fmt --check . && deno lint . && deno check --allow-import",
+        "dev": "vite",
+        "build": "vite build",
+        "start": "deno serve -A _fresh/server.js",
+        "bot": "deno run -A --watch=telegram/,utils/ bot.ts",
+        "update": "deno run -A -r jsr:@fresh/update ."
+    },
+    "lint": {
+        "rules": {
+            "tags": ["fresh", "recommended"]
+        }
+    },
+    "exclude": ["**/_fresh/*"],
+    "imports": {
+        "$utils/": "./utils/",
+        "$grammy/": "./telegram/",
+        "$types/": "./types/",
+        "@std/dotenv": "jsr:@std/dotenv@^0.225.7",
+        "@std/fmt": "jsr:@std/fmt@^1.0.10",
+        "fresh": "jsr:@fresh/core@^2.3.3",
+        "@fresh/plugin-vite": "jsr:@fresh/plugin-vite@^1.1.2",
+        "preact": "npm:preact@^10.29.4",
+        "@preact/signals": "npm:@preact/signals@^2.9.2",
+        "vite": "npm:vite@^7.1.4",
+        "@types/babel__core": "npm:@types/babel__core@^7.20.5",
+        "grammy": "npm:grammy@^1.44.0/web",
+        "grammy_parse_mode": "npm:@grammyjs/parse-mode@^2.3.0",
+        "@grammyjs/types": "npm:@grammyjs/types@^3.28.0"
+    },
+    "compilerOptions": {
+        "lib": [
+            "dom",
+            "dom.asynciterable",
+            "dom.iterable",
+            "deno.ns",
+            "deno.unstable"
+        ],
+        "jsx": "precompile",
+        "jsxImportSource": "preact",
+        "jsxPrecompileSkipElements": [
+            "a",
+            "img",
+            "source",
+            "body",
+            "html",
+            "head",
+            "title",
+            "meta",
+            "script",
+            "link",
+            "style",
+            "base",
+            "noscript",
+            "template"
+        ],
+        "types": ["vite/client"]
+    }
 }

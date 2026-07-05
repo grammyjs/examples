@@ -1,24 +1,16 @@
-import { Head } from "$fresh/runtime.ts";
+import { Head } from "fresh/runtime";
+import { define } from "../utils.ts";
 import TryWebApp from "../islands/TryWebApp.tsx";
 
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Fresh App</title>
-      </Head>
-      <div class="p-4 mx-auto max-w-screen-md">
-        <img
-          src="/logo.svg"
-          class="w-32 h-32"
-          alt="the fresh logo: a sliced lemon dripping with juice"
-        />
-        <p class="my-6">
-          Welcome to `fresh`. Try updating this message in the
-          ./routes/index.tsx file, and refresh.
-        </p>
-        <TryWebApp />
-      </div>
-    </>
-  );
-}
+export default define.page(function Home() {
+    return (
+        <>
+            <Head>
+                <title>grammY WebApp</title>
+            </Head>
+            <div class="p-4 mx-auto max-w-screen-md">
+                <TryWebApp />
+            </div>
+        </>
+    );
+});
